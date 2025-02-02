@@ -84,7 +84,7 @@ classify_color_season <- function(r_norm, g_norm, b_norm) {
 }
 
 # Load data
-df <- read.csv('Profile_of_Body_Metrics_and_Fashion_Colors.csv', sep = ';')
+df <- read.csv('datasets/Profile_of_Body_Metrics_and_Fashion_Colors.csv', sep = ';')
 
 # Process colors and create normalized values
 process_colors <- function(df, col_name) {
@@ -305,7 +305,7 @@ ggsave("mca_bmi_gender_clothes_pants_harmony_skin_dimensions.png", fviz_eig(mca_
 
 
 # Read the dataset
-music_data <- read.csv("muse_v3_modified.csv", nrows = 5000)
+music_data <- read.csv("datasets/muse_v3_modified.csv", nrows = 5000)
 
 # Remove rows with NA values
 music_data <- na.omit(music_data)
@@ -433,7 +433,7 @@ dev.off()
 
 # Read the dataset
 
-music_data <- read.csv("muse_v3.csv")
+music_data <- read.csv("datasets/muse_v3.csv")
 
 # Step 1: Filter for songs with exactly one emotion tag and create mean column
 filtered_music <- music_data %>%
